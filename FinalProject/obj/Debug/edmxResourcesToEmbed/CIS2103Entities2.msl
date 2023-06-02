@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CIS2103ModelStoreContainer" CdmEntityContainer="CIS2103Entities2">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="CIS2103Model.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="faculties">
+      <EntityTypeMapping TypeName="CIS2103Model.faculty">
+        <MappingFragment StoreEntitySet="faculty">
+          <ScalarProperty Name="faculty_id" ColumnName="faculty_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="units">
+      <EntityTypeMapping TypeName="CIS2103Model.unit">
+        <MappingFragment StoreEntitySet="units">
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="c1" ColumnName="c1" />
+          <ScalarProperty Name="c2" ColumnName="c2" />
+          <ScalarProperty Name="c3" ColumnName="c3" />
+          <ScalarProperty Name="c4" ColumnName="c4" />
+          <ScalarProperty Name="c5" ColumnName="c5" />
+          <ScalarProperty Name="c6" ColumnName="c6" />
+          <ScalarProperty Name="c7" ColumnName="c7" />
+          <ScalarProperty Name="c8" ColumnName="c8" />
+          <ScalarProperty Name="stud_id" ColumnName="stud_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="CIS2103Model.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

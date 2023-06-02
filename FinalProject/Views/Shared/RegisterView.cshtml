@@ -1,0 +1,43 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>LoginView</title>
+    @Styles.Render("~/Content/Login.css")
+</head>
+<body>
+    <div className="main">
+        <div className="login">
+            <div className="logo">
+                EnrollUnits
+            </div>
+            <label htmlFor="chk" aria-hidden="true">
+                Login
+            </label>
+            <form>
+                onSubmit(e)}>
+                <input className="inp"
+                       value="email"
+                       type="email"
+                       name="email"
+                       placeholder="Email"
+                       required>
+              
+                <input className="inp"
+                       value={password}
+                       type="password"
+                       name="pswd"
+                       placeholder="Password"
+                       required>
+                <button className="btn">Sign-in</button>
+            </form>
+            <a className="reg">
+                Don't have an account yet?
+            </a>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>

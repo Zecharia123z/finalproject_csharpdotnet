@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "UserChangePass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="../Content/StudentEnroll.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="main">
+    <div class="unitscontainer3">
+        <center>
+        <label class="pagename" htmlFor="chk" aria-hidden="true">
+            Change Password
+        </label>
+        <form method="post" action="UserChangeCode">
+
+            <input class="inp" type="email" name="email" placeholder="Email" />
+            <input class="inp" type="password" name="password" placeholder="Password" />
+            <input class="inp" type="password" name="confirmpassword" placeholder="Confirm Password" />
+            <button class="btn2">Change Password</button>
+
+        </form>
+        </center>
+    </div>
+</div>

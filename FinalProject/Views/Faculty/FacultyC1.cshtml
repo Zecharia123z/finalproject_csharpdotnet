@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "FacultyC1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] TableHeaders = new string[] { "C1", "Student ID" };
+}
+<h2>CIS2101 Advisory</h2>
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @foreach (var head in TableHeaders)
+                {
+                    <th>
+                        @head
+                    </th>
+                }
+            </tr>
+        </thead>
+        @{
+            if (Model != null)
+            {
+                foreach (var Data in Model)
+                {
+                    <tr>
+                        <td>@Data.c1</td>
+                        <td>@Data.stud_id</td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+</div>

@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "UserEntryCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="../Content/StudentEnroll.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="main">
+    <div class="unitscontainer">
+        <center>
+
+            <button class="btn" onClick="window.location.href='/User/UserStudyLoad'">Study Load</button>
+            <button class="btn" onClick="window.location.href='/Home/About'">About Us</button>
+            <button class="btn" onClick="window.location.href='/User/UserChangePass'">Change Password</button>
+        </center>
+    </div>
+    <div class="unitscontainer2">
+        <form method="post" action="UserTableCode">
+            <center>
+                    <input class="inp" name="c1" placeholder="CIS2101" />
+                    <input class="inp" name="c2" placeholder="CIS2102" />
+                    <input class="inp" name="c3" placeholder="CIS2103" />
+                    <input class="inp" name="c4" placeholder="CIS2104" />
+                    <input class="inp" name="c5" placeholder="CIS2105" />
+                    <input class="inp" name="c6" placeholder="CIS2106" />
+                    <input class="inp" name="c7" placeholder="EDM2" />
+                    <input class="inp" name="c8" placeholder="TFL" />
+                    <input class="inp" name="stud_id" placeholder="Student ID" required />
+                    <button class="btn2">Enroll</button>
+                </center>
+        </form>
+    </div>
+</div>

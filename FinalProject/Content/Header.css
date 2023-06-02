@@ -1,0 +1,22 @@
+﻿.headerright a {
+  float: right;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  line-height: 25px;
+  border-radius: 5px;
+  width: 70px;
+  margin-right: 30px;
+  margin-left: 30px;
+  color: gray;
+  
+}
+
+
+.headerright {
+  font-family: sans-serif;
+  float: right;
+  position: relative;
+  flex: auto;
+  display: flex;
+}

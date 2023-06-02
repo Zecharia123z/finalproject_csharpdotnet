@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "FacultyEntryForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="../Content/Register.css" rel="stylesheet" type="text/css" />
+}
+
+<h2>AdminEntryForm</h2>
+
+<div class="main">
+    <div class="login">
+        <br /><br />
+        <label class="pagename" htmlFor="chk" aria-hidden="true">
+            Login
+        </label>
+        <form method="post" action="FacultyEntryCode">
+
+            <input class="inp"
+                   type="email"
+                   name="email"
+                   placeholder="Email"
+                   required />
+
+            <input class="inp"
+                   type="password"
+                   name="password"
+                   placeholder="Password"
+                   required />
+
+            <button class="btn">Sign-in as Faculty</button>
+        </form>
+    </div>
+</div>

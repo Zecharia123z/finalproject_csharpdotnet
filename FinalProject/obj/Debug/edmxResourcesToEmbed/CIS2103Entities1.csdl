@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CIS2103Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="faculty">
+    <Key>
+      <PropertyRef Name="faculty_id" />
+    </Key>
+    <Property Name="faculty_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="unit">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="c1" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c2" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c3" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c4" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c5" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c6" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c7" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="c8" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="stud_id" Type="Int32" />
+    <NavigationProperty Name="user" Relationship="Self.FK_units_user" FromRole="units" ToRole="user" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="units" Relationship="Self.FK_units_user" FromRole="user" ToRole="units" />
+  </EntityType>
+  <Association Name="FK_units_user">
+    <End Role="user" Type="Self.user" Multiplicity="0..1" />
+    <End Role="units" Type="Self.unit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="units">
+        <PropertyRef Name="stud_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CIS2103Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admins" EntityType="Self.admin" />
+    <EntitySet Name="faculties" EntityType="Self.faculty" />
+    <EntitySet Name="units" EntityType="Self.unit" />
+    <EntitySet Name="users" EntityType="Self.user" />
+    <AssociationSet Name="FK_units_user" Association="Self.FK_units_user">
+      <End Role="user" EntitySet="users" />
+      <End Role="units" EntitySet="units" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

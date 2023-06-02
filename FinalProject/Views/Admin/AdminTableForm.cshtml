@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "AdminTableForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string[] TableHeaders = new string[] { "CID","C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "Student ID" };
+}
+
+<h2>AdminEntryCode</h2>
+
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @foreach (var head in TableHeaders)
+                {
+                    <th>
+                        @head
+                    </th>
+                }
+            </tr>
+        </thead>
+        @{
+            if (Model != null)
+            {
+                foreach (var Data in Model)
+                {
+                    <tr>
+                        <td>@Data.cid</td>
+                        <td>@Data.c1</td>
+                        <td>@Data.c2</td>
+                        <td>@Data.c3</td>
+                        <td>@Data.c4</td>
+                        <td>@Data.c5</td>
+                        <td>@Data.c6</td>
+                        <td>@Data.c7</td>
+                        <td>@Data.c8</td>
+                        <td>@Data.stud_id</td>
+                    </tr>
+                }
+            }
+        }
+    </table>
+    <form method="post" action="AdminEditForm">
+        <button>Manage Student Units</button>
+    </form>
+    <button onclick="window.location.href ='/Faculty/FacultyAddForm'">Add Faculty Member</button>
+</div>

@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "AdminEditForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="../Content/StudentEnroll.css" rel="stylesheet" type="text/css" />
+}
+<div class="main">
+    <div class="unitscontainerv2">
+        <center>
+            <label class="pagename" htmlFor="chk" aria-hidden="true">
+                Student's Units
+            </label>
+            <form method="post" action="AdminEditCode">
+
+                <input class="inp" name="c1" placeholder="CIS2101" />
+                <input class="inp" name="c2" placeholder="CIS2102" />
+                <input class="inp" name="c3" placeholder="CIS2103" />
+                <input class="inp" name="c4" placeholder="CIS2104" />
+                <input class="inp" name="c5" placeholder="CIS2105" />
+                <input class="inp" name="c6" placeholder="CIS2106" />
+                <input class="inp" name="c7" placeholder="EDM2" />
+                <input class="inp" name="c8" placeholder="TFL" />
+                <input class="inp" name="stud_id" placeholder="Student ID" required />
+                <button class="bottin">Edit</button>
+                <button class="bottin" onClick="window.location.href='/Admin/AdminDeleteCode'">Delete</button>
+            </form>
+            
+        </center>
+    </div>
+</div>

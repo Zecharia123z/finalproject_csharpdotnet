@@ -1,0 +1,43 @@
+﻿body{
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(white, darkgreen);
+  
+}
+html{
+    height:100%;
+}
+.main {
+  font-size: 30px;
+  
+}
+
+.header1 {
+  margin: 50px;
+  margin-bottom: 0px;
+  padding: 50px;
+  padding-bottom: 0px;
+  text-shadow: 0 2px 2px;
+}
+
+.bodycontainer {
+  color: #e8f6fd;
+}
+
+
+
+.header1,
+.para1 {
+  font-family: sans-serif;
+  color: #323232;
+}
+.para1 {
+  font-size: 25px;
+  margin: 50px;
+  margin-top: 0px;
+  margin-bottom: 100px;
+  padding: 50px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+
+}

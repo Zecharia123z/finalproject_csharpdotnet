@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "UserEntryForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    <link href="../Content/Register.css" rel="stylesheet" type="text/css" />
+}
+
+<h2>UserEnterForm</h2>
+
+<div class="main">
+    <div class="login">
+        <br /><br />
+        <label class="pagename" htmlFor="chk" aria-hidden="true">
+            Login
+        </label>
+
+        <form method="post" action="UserEntryCode">
+
+            <input class="inp"
+                   type="email"
+                   name="email"
+                   placeholder="Email"
+                   required />
+
+            <input class="inp"
+                   type="password"
+                   name="password"
+                   placeholder="Password"
+                   required />
+
+            <button class="btn">Sign-in</button>
+        </form>
+        <a class="reg" href="/User/UserAddForm">
+            Don't have an account yet?
+        </a>
+        <br />
+        <a class="reg" href="/Admin/AdminEntryForm">
+            Are you an admin?
+        </a>
+        <br />
+        <a class="reg" href="/Faculty/FacultyEntryForm">
+            Are you a teacher?
+        </a>
+    </div>
+</div>
